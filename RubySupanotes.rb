@@ -14,15 +14,17 @@
 # 2. CONDITIONALS
 # 3. LOOPS
 # 4. ITERATORS
+# 5. DEBUG
 
 #### 1. DATA TYPES
 
 ## ARRAY
+Array
 
-## HASH
+## HASH also called associative Array
 Hash = Hash.new = {}
 
-# Show Hash as Arrayaa
+# Show Hash as Array
 Hash.values
 
 
@@ -84,14 +86,34 @@ for value in Array do
 end  # Will take each value and multiply by two,
 
 
-Execut
+
 
 #### 4. ITERATORS
 
+## HASH TO ARRAY
+hash.values # output array with all values
+hash.keys #  out put array with all keys
+hash.key? "key" # true/false if that key is present
+
+
+## HASH
+# ITERATOR HASH
+
+# Iterate on each value
+hash.each_value do |value|
+  puts "#{value} is an attribute of hash" # e.g. transform all values
+end
+
+# Iterate on each key
+hash.each_key do |key|      # e.g. transform all keys
+  puts "#{key} is a key of hash"
+end
+
+
 # EACH WITH INDEX
 def sum_odd_indexed(array)
-  # TODO: computes the sum of elements at odd indexes (1, 3, 5, 7, etc.)
-  # You should use Enumerable#each_with_index
+  # TODO: computes the sum of elements at od  # You should use Enumerable#each_with_index
+d indexes (1, 3, 5, 7, etc.)
   sum = 0
   array.each_with_index { |val, index| sum += val if index.odd? }
   return sum
@@ -133,6 +155,14 @@ def sorted_pairs(array)
   array.each_slice(2) { |a| pairs.push(a.sort) }
   return pairs
 end
+
+#### 5. DEBUG
+# rubygems.com
+require "pry bye-bug"
+binding.pry
+
+
+
 
 
 
